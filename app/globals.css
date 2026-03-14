@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-bg: #0a0a0a;
+  --color-surface: #141414;
+  --color-border: #222222;
+  --color-text-1: #e8e8e8;
+  --color-text-2: #888888;
+  --color-text-3: #555555;
+
+  --font-serif: var(--font-cormorant), "Noto Serif KR", Georgia, serif;
+  --font-sans: var(--font-pretendard), "Noto Sans KR", system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text-1);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: rgba(232, 232, 232, 0.15);
+  color: var(--color-text-1);
+}
+
+/* Scroll indicator pulse */
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2.5s ease-in-out infinite;
+}
