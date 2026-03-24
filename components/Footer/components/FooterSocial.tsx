@@ -11,7 +11,7 @@ export default function FooterSocial() {
             PR & NEWS
           </h4>
           <ul className="space-y-1">
-            {NEWS_ITEMS.map((news) => (
+            {NEWS_ITEMS.slice(0, 4).map((news) => (
               <li key={news.title} className="font-sans text-xs text-[var(--color-text-3)]">
                 {news.url ? (
                   <a

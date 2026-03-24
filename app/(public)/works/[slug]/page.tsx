@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 
 import { WORKS } from '@/constants/works';
 import WorkSpecs from '@/components/WorkDetail/WorkSpecs';
@@ -34,9 +35,20 @@ export default async function WorkDetailPage({ params }: Props) {
 
   return (
     <div>
-      {/* Hero image placeholder */}
-      <section className="flex h-[70vh] items-center justify-center">
-        <div className="h-full w-full bg-gradient-to-br from-[var(--color-surface)] to-[var(--color-bg)]" />
+      {/* Hero image */}
+      <section className="relative h-[70vh] overflow-hidden">
+        {work.heroImage ? (
+          <Image
+            src={work.heroImage}
+            alt={work.title}
+            fill
+            className="object-cover"
+            priority
+          />
+        ) : (
+          <div className="h-full w-full bg-gradient-to-br from-[var(--color-surface)] to-[var(--color-bg)]" />
+        )}
+        <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-bg)] via-transparent to-transparent" />
       </section>
 
       {/* Work info */}

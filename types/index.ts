@@ -38,6 +38,8 @@ export interface Work {
   technologies: Technology[];
   specs: WorkSpecs;
   featured: boolean;
+  thumbnail?: string;
+  heroImage?: string;
 }
 
 // ============================================================
@@ -119,6 +121,26 @@ export interface NewsItem {
   date: string;
   url?: string;
   source?: string;
+}
+
+// ============================================================
+// History (연혁)
+// ============================================================
+
+export interface HistoryItem {
+  year: string;
+  month?: string;
+  title: string;
+  description?: string;
+}
+
+// ============================================================
+// FAQ
+// ============================================================
+
+export interface FAQItem {
+  question: string;
+  answer: string;
 }
 
 // ============================================================

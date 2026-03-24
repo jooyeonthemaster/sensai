@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import VisionSection from '@/components/About/VisionSection';
 import TechnologySection from '@/components/About/TechnologySection';
 import TeamSection from '@/components/About/TeamSection';
+import HistorySection from '@/components/About/HistorySection';
+import FAQSection from '@/components/FAQ';
 
 export const metadata: Metadata = {
   title: 'About — SENSAI',
@@ -14,6 +16,8 @@ export default function AboutPage() {
       <VisionSection />
       <TechnologySection />
       <TeamSection />
+      <HistorySection />
+      <FAQSection />
     </div>
   );
 }

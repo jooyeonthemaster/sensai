@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import type { Work } from '@/types';
 
@@ -18,13 +19,23 @@ export default function WorkCard({ work, index }: WorkCardProps) {
       transition={{ duration: 0.8, delay: index * 0.1, ease: 'easeOut' }}
     >
       <Link href={`/works/${work.slug}`} className="group block">
-        {/* Thumbnail placeholder */}
+        {/* Thumbnail */}
         <div className="aspect-[4/3] overflow-hidden bg-gradient-to-br from-[var(--color-surface)] to-[var(--color-border)] transition-transform duration-500 group-hover:scale-[1.02]">
-          <div className="flex h-full items-center justify-center">
-            <span className="font-serif text-lg text-[var(--color-text-3)]">
-              {work.titleEn}
-            </span>
-          </div>
+          {work.thumbnail ? (
+            <Image
+              src={work.thumbnail}
+              alt={work.title}
+              width={800}
+              height={600}
+              className="h-full w-full object-cover"
+            />
+          ) : (
+            <div className="flex h-full items-center justify-center">
+              <span className="font-serif text-lg text-[var(--color-text-3)]">
+                {work.titleEn}
+              </span>
+            </div>
+          )}
         </div>
 
         {/* Info */}

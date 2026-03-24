@@ -25,6 +25,8 @@ export const WORKS: Work[] = [
       darkRoom: true,
     },
     featured: true,
+    thumbnail: '/images/works/gaze-of-others-thumb.png',
+    heroImage: '/images/works/gaze-of-others-hero.png',
   },
   {
     slug: 'resonance',
@@ -50,6 +52,8 @@ export const WORKS: Work[] = [
       darkRoom: false,
     },
     featured: true,
+    thumbnail: '/images/works/resonance-thumb.png',
+    heroImage: '/images/works/resonance-hero.png',
   },
   {
     slug: 'afterimage',
@@ -75,6 +79,8 @@ export const WORKS: Work[] = [
       darkRoom: true,
     },
     featured: true,
+    thumbnail: '/images/works/afterimage-thumb.png',
+    heroImage: '/images/works/afterimage-hero.png',
   },
   {
     slug: 'impossible-companions',
@@ -100,6 +106,8 @@ export const WORKS: Work[] = [
       darkRoom: false,
     },
     featured: false,
+    thumbnail: '/images/works/impossible-companions-thumb.png',
+    heroImage: '/images/works/impossible-companions-hero.png',
   },
   {
     slug: 'time-of-plants',
@@ -125,6 +133,8 @@ export const WORKS: Work[] = [
       darkRoom: false,
     },
     featured: false,
+    thumbnail: '/images/works/time-of-plants-thumb.png',
+    heroImage: '/images/works/time-of-plants-hero.png',
   },
 ];
 

@@ -36,6 +36,17 @@ yarn-error.log*
 # vercel
 .vercel
 
+# project artifacts (PDF, scripts, etc.)
+/pages/
+/scripts/
+*.hwp
+*.pdf
+pdf_content.txt
+extract_pdf*.py
+.claude/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+.vercel
